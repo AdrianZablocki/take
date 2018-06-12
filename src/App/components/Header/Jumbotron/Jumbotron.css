@@ -1,0 +1,60 @@
+.Jumbotron {
+  position: absolute;
+  top: 53.7%;
+  transform: translateY(-50%);
+  width: 30%;
+}
+
+.Jumbotron .Title {
+  color: #FFF;
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  font-weight: 300;
+  margin: 0 0 20px -4px;
+  position: relative;
+  top: 150px;
+  opacity: 0;
+  transition: all 900ms ease-out;
+}
+
+.Jumbotron .Title-show {
+  top: 0;
+  opacity: 1;
+}
+
+.Jumbotron .Text {
+  color: #FFF;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 24px;
+  opacity: 0;
+  position: relative;
+  left: -600px;
+  transition: all 600ms ease-out 900ms;
+}
+
+.Jumbotron .Text-show {
+  left: 0;
+  opacity: 1;
+}
+
+/*========================================================================================*/
+/*RWD                                                                                     */
+/*========================================================================================*/
+@media(max-width: 1280px) {
+  .Jumbotron {
+    width: 40%;
+  }
+}
+
+@media(max-width: 991px) {
+  .Jumbotron {
+    width: 50%;
+  }
+}
+
+@media(max-width: 767px) {
+  .Jumbotron {
+    width: 100%;
+  }
+}

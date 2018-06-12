@@ -1,0 +1,219 @@
+.Slider {
+  margin-bottom: 90px;
+  transition: all 300ms ease-out;
+}
+
+ .Container.Slider {
+  position: relative;
+} 
+
+.Slider .slider-positioner {
+  width: 1600px;
+  position: relative;
+  left: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 600ms ease-in-out;
+}
+
+.Slider .slider-positioner.slider-positioner-move {
+  left: -428px;
+}
+
+.Slider .Title {
+  font-size: 1.875rem;
+  font-weight: 300;
+  color: #FFF;
+  padding-bottom: 30px;
+  transition: all 500ms ease-in-out;
+}
+
+.Slider .Text {
+  font-size: 0.8125rem;
+  padding-bottom: 40px;
+  transition: all 500ms ease-in-out;
+}
+
+.Slider .article {
+  background-color: #CCC;
+  padding: 50px 42px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 25%;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+
+.Slider .top {
+  display: flex;
+}
+
+.Slider .top .one-half:first-child {
+  background-color:  #f5989d;
+}
+
+.Slider .top .one-half:last-child {
+  background-color:  #615f7d;
+}
+
+.Slider .bottom {
+  display: flex;
+}
+
+.Slider .bottom .article {
+  width: 25%;
+}
+
+.Slider .bottom .article-big {
+  width: 50%;
+}
+
+.Slider button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: transparent;
+  color:  #FFF;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  outline: none;
+  padding-left: 0;
+  transition: all 500ms ease-in-out;
+}
+
+.Slider button:after,
+.Slider button::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 300ms ease-in-out;
+}
+
+
+.Slider button:after {
+  width: 14px;
+  height: 2px;
+  background-color: #FFF;
+  left: 100%;
+}
+
+.Slider button::before {
+  left: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 5px solid #FFF;
+}
+
+.Slider button:hover:after {
+  left: 110%;
+}
+
+.Slider button:hover:before {
+  left: calc(110% + 14px);
+}
+
+.Slider .layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.875rem;
+  font-weight: 300;
+  color: #FFF;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease-in-out;
+}
+
+/*===ANIMATION/TRANSLATION===*/
+.Slider .article.transform,
+.Slider .article.transform .layer {
+  transform: rotateY(3.142rad);
+}
+
+.Slider .article.transform .layer {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Slider .article.transform button,
+.Slider .article.transform .Title,
+.Slider .article.transform .Text {
+  transform: rotateY(3.142rad);
+}
+
+.Slider .article.transform .Title,
+.Slider .article.transform .Text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Slider .article.transform button {
+  z-index: 1000;
+}
+
+/*========================================================================================*/
+/*RWD                                                                                     */
+/*========================================================================================*/
+@media(max-width: 1280px) {
+  .Slider .slider-positioner.slider-positioner-move {
+    left: -576px;
+  }
+}
+
+@media(max-width: 1100px) {
+  .Slider .slider-positioner.slider-positioner-move {
+    left: -609px;
+  }
+}
+
+@media(max-width: 1024px) {
+  .Slider .slider-positioner.slider-positioner-move {
+    left: -700px;
+  }
+}
+
+@media(max-width: 991px) {
+  .Slider .top,
+  .Slider .bottom {
+    flex-wrap: wrap;
+  }
+
+  .Slider .article,
+  .Slider .bottom .article {
+    width: 50%;
+  }
+
+  .Slider .slider-positioner,
+  .Slider .bottom .article:last-child {
+    width: 100%;
+  }
+  .Slider .slider-positioner.slider-positioner-move {
+    left: 0;
+  }
+  .Slider .Title,
+  .Slider .Text {
+    padding: 0 0 30px 0;
+  }
+}
+ 
+@media(max-width: 767px) {
+  .Slider .article,
+  .Slider .bottom .article {
+    width: 100%;
+  }
+}

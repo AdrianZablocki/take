@@ -1,0 +1,31 @@
+.Details .Article-wrapper {
+  display: flex;
+  padding-top: 68px;
+  margin: 0 -15px 0 -15px;
+  overflow: hidden;
+}
+
+.Details .Text {
+  color: #959595;
+  padding: 0 15px 150px 15px;
+}
+
+.Details .Article-wrapper .Title {
+  color:  #66676d;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.5px;
+  padding: 0 15px 28px 15px;
+}
+/*========================================================================================*/
+/*RWD                                                                                     */
+/*========================================================================================*/
+@media(max-width: 991px) {
+  .Details .Article-wrapper {
+    margin: 0;
+    display: block;
+  }
+  .Details .Text {
+    padding-bottom: 23px;
+  }
+}

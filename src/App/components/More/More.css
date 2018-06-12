@@ -1,0 +1,45 @@
+.More {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.More .Container {
+  padding: 24% 0 100px 0;
+}
+
+.More .Title {
+  color: #FFF;
+  font-weight: 300;
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  margin: 10px 0 0 -4px;
+}
+
+.More .Text {
+  color: #FFF;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding-top: 30px;
+  width: 36%;
+}
+/*========================================================================================*/
+/*RWD                                                                                     */
+/*========================================================================================*/
+@media(max-width: 991px) {
+  .More .Text {
+    width: 50%;
+  }
+}
+
+@media(max-width: 767px) {
+  .More .Text {
+    width: 75%;
+  }
+}
+@media(max-width: 540px) {
+  .More .Title {
+    font-size: 3.125rem;
+    line-height: 3.125rem;
+  }
+}

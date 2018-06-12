@@ -1,0 +1,135 @@
+/*========================================================================================*/
+/*MAIN/STYLE                                                                              */
+/*========================================================================================*/
+.App {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.Container {
+  max-width: 1172px;
+  margin: 0 auto;
+}
+/*========================================================================================*/
+/*ANIMATIONS/START                                                                        */
+/*========================================================================================*/
+/*===START COMPONENT===*/
+.Start .Text {
+  position: relative;
+}
+
+.Start .Title {
+  opacity: 0;
+  transition: all 600ms ease-in-out;
+}
+
+.Start.animation .Title {
+  opacity: 1;
+}
+
+.Start .Article-wrapper .Text {
+  margin-bottom: 23px;
+  opacity: 0;
+  position: relative;
+  bottom: -100%;
+  transition: all 600ms ease-in-out;
+}
+
+/*===DETAILS COMPONENT===*/
+.Details .Article-wrapper .article-details {
+  position: relative;
+  top: 400px;
+  transition: all 600ms ease-in-out;
+}
+
+.Details.animation .Article-wrapper .article-details {
+  top: 0;
+}
+
+.Details .Title:first-child {
+  opacity: 0;
+  transition: all 600ms ease-in-out;
+}
+
+.Details.animation .Title:first-child {
+  opacity: 1;
+}
+
+/*===ONBOARD COMPONENT===*/
+.Onboard .Title {
+  position: relative;
+  opacity: 0;
+  transition: all 600ms ease-in-out;
+}
+
+.Onboard .article {
+  position: relative;
+  opacity: 0;
+  bottom: -200px;
+  transition: all 600ms ease-in-out;
+}
+
+.Onboard.animation .article {
+  opacity: 1;
+  bottom: 0;
+}
+
+.Onboard.animation .Title {
+  opacity: 1;
+}
+
+.Start.animation .Article-wrapper .Text {
+  opacity: 1;
+  bottom: 0;
+}
+
+/*===ANIMATIONS RWD===*/
+@media(max-width: 991px) {
+  .Start .Title,
+  .Details .Title:first-child,
+  .Onboard .Title {
+    opacity: 1;
+  }
+
+  .Start .Article-wrapper .Text,
+  .Details .Title:first-child,
+  .Onboard .article {
+    opacity: 1;
+    bottom: 0;
+  }
+  .Details .Article-wrapper .article-details {
+    top: 0;
+  }
+}
+/*========================================================================================*/
+/*RWD                                                                                     */
+/*========================================================================================*/
+@media(max-width: 1280px) {
+  .Container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 1100px) {
+  .Container {
+    max-width: 991px;
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 1024px) {
+  .Container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 991px) {
+  .Container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+} 

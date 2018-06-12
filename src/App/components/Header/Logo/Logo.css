@@ -1,0 +1,78 @@
+.Logo {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  color: #FFF;
+  font-size: 20px;
+  padding-top: 47px;
+}
+
+.Logo-shape {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  position: relative;
+  top: 12px;
+  margin-right: 10px;
+  opacity: 0; 
+}
+
+.Logo .Logo-shape-show {
+  animation: beat 3.6s infinite;
+  animation-delay: 2s;
+}
+
+.Logo-shape:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #FFF;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+@keyframes beat
+{
+  0%
+  {
+    transform: scale( .9 );
+    opacity: 1;
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .9 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .9 );
+  }
+  100%
+  {
+    transform: scale( .9 );
+    opacity: 1;
+  }
+}
+/*========================================================================================*/
+/*RWD                                                                                     */
+/*========================================================================================*/
+@media(max-width: 991px) {
+  .Logo {
+    padding: 0 15px;
+  }
+}

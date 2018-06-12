@@ -1,0 +1,26 @@
+.Phone {
+  position: absolute;
+  bottom: -17vh;
+  right: -50%;
+  width: 37%;
+  height: auto;
+  opacity: 0;
+  transition: all 1800ms ease-in-out;
+}
+
+.Phone.Phone-show {
+  right: 14%;
+  opacity: 1;
+}
+
+.Phone img {
+  width: 100%;
+}
+/*========================================================================================*/
+/*RWD                                                                                     */
+/*========================================================================================*/
+@media(max-width: 767px) {
+  .Phone.Phone-show {
+    display: none;
+  }
+}

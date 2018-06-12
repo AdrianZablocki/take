@@ -1,0 +1,16 @@
+.Header-bg {
+  width: 100%;
+  height: 88vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+/*========================================================================================*/
+/*RWD                                                                                     */
+/*========================================================================================*/
+@media(max-width: 767px) {
+  .Header-bg {
+    height: 100vh;
+  }
+}
