@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 import './App.css';
 import Header from '../components/Header/Header';
@@ -27,9 +28,9 @@ class App extends Component {
 
   setOnScrollHandler = (event) => {
     const windowHeight = window.innerHeight + 80;
-    const boundsStart = document.querySelector('.Start').getBoundingClientRect();
-    const boundsDetails = document.querySelector('.Details').getBoundingClientRect();
-    const boundsOnBoard = document.querySelector('.Onboard').getBoundingClientRect();
+    const boundsStart = ReactDOM.findDOMNode(this.Start).getBoundingClientRect();
+    const boundsDetails = ReactDOM.findDOMNode(this.Details).getBoundingClientRect();
+    const boundsOnBoard = ReactDOM.findDOMNode(this.Onboard).getBoundingClientRect();
     
     
     let newStartClasses = [...this.state.startClasses];
@@ -83,11 +84,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Start styleClass={this.state.startClasses.join(' ')} />
+        <Start styleClass={this.state.startClasses.join(' ')} ref={(section) => { this.Start = section; }} />
         <Slider />
-        <Details styleClass={this.state.detailsClasses.join(' ')}/>
+        <Details styleClass={this.state.detailsClasses.join(' ')} ref={(section) => { this.Details = section; }}/>
         <More />
-        <Onboard styleClass={this.state.onBoardClasses.join(' ')}/>
+        <Onboard styleClass={this.state.onBoardClasses.join(' ')} ref={(section) => { this.Onboard = section; }} />
         <Buy />
         <Footer />
       </div>
